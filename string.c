@@ -58,7 +58,7 @@ void count_words()
         count++;
     }
    }   
-     printf("\nThe No of Words in String::%d",count);
+     printf("\nThe No. of Words in String::%d",count);
 
 
 }
@@ -70,13 +70,13 @@ void count_vowels()
   int count=0;
   for(i=0;i<strlen(s);i++)
   {
-    if(s[i]=='a'||s[i]=='A'||s[i]=='e'||s[i]=='E'||s[i]=='i'||s[i]=='I'||s[i]=='o'||s[i]=='u'||s[i]=='U')
+    if(s[i]=='a'||s[i]=='A'||s[i]=='e'||s[i]=='E'||s[i]=='i'||s[i]=='I'||s[i]=='o'||s[i]=='O'||s[i]=='u'||s[i]=='U')
     {
         count++;
     }
   }
 
-    printf("\nThe No Vowels in String :: %d",count);
+    printf("\nThe No. of Vowels in String :: %d",count);
 }
 
 

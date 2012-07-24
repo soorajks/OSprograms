@@ -1,11 +1,7 @@
 /*
-Count the n. of vowels in given string
-----------------------------------------
-C-program for fork using
-
- 1. Count no of words when child process is executing
-
- 2. Count no of vowels when parent process is executing
+C-program for Count the no. of vowels in given string using fork()
+-------------------------------------------------------------------
+ 
 
 */
 

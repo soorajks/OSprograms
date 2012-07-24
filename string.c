@@ -6,10 +6,10 @@ C-program for Count the no. of vowels in given string using fork()
 */
 
 #include<stdio.h>
-#include<unistd.h>
 #include<string.h>
+#include<unistd.h>
 
-char s[50];
+char str[60];
 void count_words();
 void count_vowels();
 
@@ -18,7 +18,7 @@ int main(void)
   int pid;
   int i,j;
   printf("\nEnter a string::");
-  gets(s);
+  gets(str);
   pid=fork();
   if(pid==0)
   {    
@@ -47,9 +47,9 @@ void count_words()
    int i,j,k;
    int count=1;
    
-   for(i=0;i<strlen(s);i++)
+   for(i=0;i<strlen(str);i++)
    {
-    if(s[i]==32)
+    if(str[i]==32)
     {
         count++;
     }
@@ -64,9 +64,9 @@ void count_vowels()
 {
   int i,j,k;
   int count=0;
-  for(i=0;i<strlen(s);i++)
+  for(i=0;i<strlen(str);i++)
   {
-    if(s[i]=='a'||s[i]=='A'||s[i]=='e'||s[i]=='E'||s[i]=='i'||s[i]=='I'||s[i]=='o'||s[i]=='O'||s[i]=='u'||s[i]=='U')
+    if(str[i]=='a'||str[i]=='A'||str[i]=='e'||str[i]=='E'||str[i]=='i'||str[i]=='I'||str[i]=='o'||str[i]=='O'||str[i]=='u'||str[i]=='U')
     {
         count++;
     }

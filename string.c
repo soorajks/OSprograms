@@ -1,19 +1,15 @@
 /*
-Count the n. of vowels in given string
------------------------------------------
-C-program for fork using
-
- 1. Count no of words when child process is executing
-
- 2. Count no of vowels when parent process is executing
+C-program for Count the no. of vowels in given string using fork()
+-------------------------------------------------------------------
+ 
 
 */
 
 #include<stdio.h>
-#include<unistd.h>
 #include<string.h>
+#include<unistd.h>
 
-char s[50];
+char str[60];
 void count_words();
 void count_vowels();
 
@@ -22,7 +18,7 @@ int main(void)
   int pid;
   int i,j;
   printf("\nEnter a string::");
-  gets(s);
+  gets(str);
   pid=fork();
   if(pid==0)
   {    
@@ -51,14 +47,14 @@ void count_words()
    int i,j,k;
    int count=1;
    
-   for(i=0;i<strlen(s);i++)
+   for(i=0;i<strlen(str);i++)
    {
-    if(s[i]==32)
+    if(str[i]==32)
     {
         count++;
     }
    }   
-     printf("\nThe No of Words in String::%d",count);
+     printf("\nThe No. of Words in String::%d",count);
 
 
 }
@@ -68,15 +64,15 @@ void count_vowels()
 {
   int i,j,k;
   int count=0;
-  for(i=0;i<strlen(s);i++)
+  for(i=0;i<strlen(str);i++)
   {
-    if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u')
+    if(str[i]=='a'||str[i]=='A'||str[i]=='e'||str[i]=='E'||str[i]=='i'||str[i]=='I'||str[i]=='o'||str[i]=='O'||str[i]=='u'||str[i]=='U')
     {
         count++;
     }
   }
 
-    printf("\nThe No Vowels in String :: %d",count);
+    printf("\nThe No. of Vowels in String :: %d",count);
 }
 
 
